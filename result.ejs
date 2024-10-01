@@ -1,0 +1,29 @@
+<!--Establishing needed html code to fit in screens-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Joke Result</title>
+</head>
+
+<!--Displaying the contents to the user-->
+<body>
+  <h1>Here's a Joke for You!</h1>'
+  <!--filtering out the joke to single and displaying it-->
+  <% if (data.type === 'single') { %>
+    <p><%= data.joke %></p>
+  <% }
+  else { %>
+    <!--display the data.setup & data.delivery if the joke isn't 'single'-->
+    <p><%= data.setup %></p>
+    <p><%= data.delivery %></p>
+  <% } %>
+  <!--allows users to go back to home page-->
+  <br><br><br>
+  <div style="text-align:center; font-size: 20px;">
+    <a href="/">Go Back</a>
+</div>
+</body>
+</html>
